@@ -21,8 +21,8 @@ app.use(helmet());
 
 var mongoose = require('mongoose');
 
-// var mongoDB = process.env.MONGODB_URI || 'mongodb://damiano:nettuno64@ds133251.mlab.com:33251/local_library_64';
-var mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/Scheda-Struttura';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://edmdata:nettuno64@ds135592.mlab.com:35592/scheda-struttura';
+// var mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/Scheda-Struttura';
 mongoose.connect(mongoDB);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

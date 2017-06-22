@@ -26,7 +26,6 @@
     <Compile Include="Test_debug.js" />
     <Content Include="formatta_html.html" />
     <Content Include="package.json" />
-    <Content Include="populatedb_scheda_struttura.bat" />
     <Content Include="README.md" />
     <Compile Include="app.js" />
     <Compile Include="models\anagrafica.js" />
