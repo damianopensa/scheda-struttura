@@ -2,20 +2,24 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
+  p Welcome to #[em Scheda Struttura], Demo sezione Anagrafica si Scheda Struttura.
 
 
-  h1 Dynamic content
+  h1 Riepilogo
 
   if error
     p Error getting dynamic content.
   else
 
-    p The library has the following record counts:
+    p Scheda Struttura si compone delle seguenti sezioni:
 
     ul
-      li #[strong Books:] !{data.book_count}
-      li #[strong Copies:] !{data.book_instance_count}
-      li #[strong Copies available:] !{data.book_instance_available_count} 
-      li #[strong Authors:] !{data.author_count}
-      li #[strong Genres:] !{data.genre_count}
+      li #[strong Num. Anagrafica Schede Struttura in DB:] !{data.anagrafica_count}
+      li #[strong Num. Dati Economici in DB:] ! 0         
+      li #[strong Num. Retta e Altro in DB:] ! 0         
+      li #[strong Num. Personale Struttura in DB:] ! 0    
+//-      li #[strong Books:] !{data.book_count}
+//-      li #[strong Copies:] !{data.book_instance_count}
+//-      li #[strong Copies available:] !{data.book_instance_available_count} 
+//-      li #[strong Authors:] !{data.author_count}
+//-      li #[strong Genres:] !{data.genre_count}

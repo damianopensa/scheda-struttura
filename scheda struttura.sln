@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "scheda struttura", "scheda struttura.njsproj", "{BBDE1020-F3DC-4F7C-9EBA-50B80CDB1D4B}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "script test", "..\script test\script test.njsproj", "{B45AE17D-65EA-4464-A663-50979A5D6B8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BBDE1020-F3DC-4F7C-9EBA-50B80CDB1D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBDE1020-F3DC-4F7C-9EBA-50B80CDB1D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBDE1020-F3DC-4F7C-9EBA-50B80CDB1D4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45AE17D-65EA-4464-A663-50979A5D6B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45AE17D-65EA-4464-A663-50979A5D6B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45AE17D-65EA-4464-A663-50979A5D6B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45AE17D-65EA-4464-A663-50979A5D6B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

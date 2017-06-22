@@ -1,0 +1,43 @@
+extends layout
+
+block content
+
+  h1 #{title}: #{anagrafica.Denominazione}
+  
+  p #[strong Udo:] #{anagrafica.Udo}
+  p #[strong Denominazione:] #{anagrafica.Denominazione}
+  p #[strong Cudes:] 
+    a(href=anagrafica.url) #{anagrafica.Cudes}
+  p #[strong Ats:] #{anagrafica.Ats}
+  p #[strong Titolarita:] #{anagrafica.Titolarita}
+  p #[strong Proprietario:] #{anagrafica.Proprietario}
+  p #[strong Finanziamenti:] #{anagrafica.Finanziamenti}
+  p #[strong Concessione_Comune:] #{anagrafica.Concessione_Comune}
+  p #[strong Ore_Formazione:] #{anagrafica.Ore_Formazione}
+  p #[strong PL1:]  #{anagrafica.PL1}
+  p #[strong PL2:]  #{anagrafica.PL2}
+  p #[strong PL3:]  #{anagrafica.PL3}
+  p #[strong PL4:]  #{anagrafica.PL4}
+  p #[strong Oltre4PL:]  #{anagrafica.Oltre4PL}
+  p #[strong PLB1:] #{anagrafica.PLB1}
+  p #[strong PLB2:]  #{anagrafica.PLB2}
+  p #[strong PLB3:]  #{anagrafica.PLB3}
+  p #[strong PLB4:]  #{anagrafica.PLB4}
+  p #[strong Oltre4PLB:]  #{anagrafica.Oltre4PLB}
+  p #[strong Condizionamento:]  #{anagrafica.Condizionamento}
+  p #[strong Ossigeno:]  #{anagrafica.Ossigeno}
+  p #[strong Infermiera_H24:]  #{anagrafica.Infermiera_H24}
+  p #[strong Medico_H24:] #{anagrafica.Medico_H24}
+  p #[strong Infermieri_notte:]  #{anagrafica.Infermieri_notte}
+  p #[strong Medici_Notte:]  #{anagrafica.Medici_Notte}
+  p #[strong Data_compilazione:]  #{anagrafica.Data_compilazione}
+
+  hr
+  
+  p Do you really want to delete this Anagrafica?
+    
+  form(method='POST' action='')
+    div.form-group
+      input#aid.form-control(type='hidden',name='id', required='true', value=anagrafica._id )
+
+    button.btn.btn-primary(type='submit') Delete

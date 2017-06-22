@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create Book</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <ul class="sidebar-nav">
+                    <li>
+                        <a href="/catalog">Home</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/books">All books</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/authors">All authors</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/genres">All genres</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/bookinstances">All book-instances</a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>
+                        <a href="/catalog/author/create">Create new author</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/genre/create">Create new genre</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/book/create">Create new book</a>
+                    </li>
+                    <li>
+                        <a href="/catalog/bookinstance/create">Create new book instance (copy)</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-10">
+                <h1>Create Book</h1>
+                <form method="POST" action="">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input class="form-control" id="title" type="text" placeholder="Name of book" name="title" required="true" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                        <select class="form-control" id="author" type="select" placeholder="Select author" name="author" required="true"><option value="5911b3027133c531ecb478d8">Rothfuss, Patrick</option><option value="5911b3027133c531ecb478da">Asimov, Isaac</option><option value="5911b3027133c531ecb478db">Billings, Bob</option><option value="5911b3027133c531ecb478dc">Jones, Jim</option><option value="5911b3027133c531ecb478d9">Bova, Ben</option></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Summary:</label>
+                        <input class="form-control" id="summary" type="textarea" placeholder="Summary" name="summary" value="" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN:</label>
+                        <input class="form-control" id="isbn" type="text" placeholder="ISBN13" name="isbn" value="" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label>Genre:</label>
+                        <div>
+                            <div style="display: inline; padding-right:10px;">
+                                <input class="checkbox-input" type="checkbox" name="genre" id="5911b3027133c531ecb478dd" value="5911b3027133c531ecb478dd">
+                                <label for="5911b3027133c531ecb478dd">Fantasy</label>
+                            </div>
+                            <div style="display: inline; padding-right:10px;">
+                                <input class="checkbox-input" type="checkbox" name="genre" id="5911b3027133c531ecb478de" value="5911b3027133c531ecb478de">
+                                <label for="5911b3027133c531ecb478de">Science Fiction</label>
+                            </div>
+                            <div style="display: inline; padding-right:10px;">
+                                <input class="checkbox-input" type="checkbox" name="genre" id="5911b3027133c531ecb478df" value="5911b3027133c531ecb478df">
+                                <label for="5911b3027133c531ecb478df">French Poetry</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

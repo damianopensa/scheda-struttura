@@ -1,0 +1,175 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='Udo') UDO:
+      select#Udo.form-control(type='select', placeholder='Select status'  name='Udo' required='true' )
+        if anagrafica
+          option(value='RSA' selected=(anagrafica.Udo=='RSA' ? 'selected' : false) ) RSA
+          option(value='CDI' selected=(anagrafica.Udo=='CDI' ? 'selected' : false) ) CDI
+          option(value='RSD' selected=(anagrafica.Udo=='RSD' ? 'selected' : false) ) RSD
+          option(value='CSS' selected=(anagrafica.Udo=='CSS' ? 'selected' : false) ) CSS
+          option(value='CDD' selected=(anagrafica.Udo=='CDD' ? 'selected' : false) ) CDD
+          option(value='TOX RESIDENZIALE' selected=(anagrafica.Udo=='TOX RESIDENZIALE' ? 'selected' : false) ) TOX RESIDENZIALE
+          option(value='TOX SEMIRESIDENZIALE' ) selected=(anagrafica.Udo=='TOX SEMIRESIDENZIALE' ? 'selected' : false) ) TOX SEMIRESIDENZIALE
+          option(value='TOX AMBULATORIALE' ) selected=(anagrafica.Udo=='TOX AMBULATORIALE' ? 'selected' : false) ) TOX AMBULATORIALE
+          option(value='CONSULTORIO' ) selected=(anagrafica.Udo=='CONSULTORIO' ? 'selected' : false) ) CONSULTORIO
+        else
+          option(value='RSA' ) RSA
+          option(value='CDI' ) CDI
+          option(value='RSD' ) RSD
+          option(value='CSS' ) CSS
+          option(value='CDD' ) CDD
+          option(value='TOX RESIDENZIALE' ) TOX RESIDENZIALE
+          option(value='TOX SEMIRESIDENZIALE' ) TOX SEMIRESIDENZIALE
+          option(value='TOX AMBULATORIALE' ) TOX AMBULATORIALE
+          option(value='CONSULTORIO' ) CONSULTORIO
+    div.form-group
+      label(for='Denominazione') Denominazione:
+      input#Denominazione.form-control(type='text', placeholder='Denominazione' name='Denominazione' required='true' value=(undefined===anagrafica ? '' : anagrafica.Denominazione) )
+    div.form-group
+      label(for='Cudes') Cudes:
+      input#Cudes.form-control(type='text', placeholder='Cudes' name='Cudes' required='true' value=(undefined===anagrafica ? '' : anagrafica.Cudes) )
+    div.form-group
+      label(for='Ats') Ats:
+      select#Ats.form-control(type='select', placeholder='Select Ats'  name='Ats' required='true' )
+        if anagrafica
+          option(value='321' selected=(anagrafica.Ats=='321' ? 'selected' : false) ) 321
+          option(value='322' selected=(anagrafica.Ats=='322' ? 'selected' : false) ) 322
+          option(value='323' selected=(anagrafica.Ats=='323' ? 'selected' : false) ) 323
+          option(value='324' selected=(anagrafica.Ats=='324' ? 'selected' : false) ) 324
+          option(value='325' selected=(anagrafica.Ats=='325' ? 'selected' : false) ) 325
+          option(value='326' selected=(anagrafica.Ats=='326' ? 'selected' : false) ) 326
+          option(value='327' selected=(anagrafica.Ats=='327' ? 'selected' : false) ) 327
+          option(value='328' selected=(anagrafica.Ats=='328' ? 'selected' : false) ) 328
+        else
+          option(value='321' selected=false ) 321
+          option(value='322' selected=false ) 322
+          option(value='323' selected=false ) 323
+          option(value='324' selected=false ) 324
+          option(value='325' selected=false ) 325
+          option(value='326' selected=false ) 326
+          option(value='327' selected=false ) 327
+          option(value='328' selected=false ) 328
+    div.form-group
+      label(for='Titolarita') Titolarita:
+      select#Titolarita.form-control(type='select', placeholder='Select Titolarita' name='Titolarita' required='true' )
+        if anagrafica
+          option(value='In locazione' selected=(anagrafica.Titolarita=='In locazione' ? 'selected' : false) ) In locazione
+          option(value='Di proprietà' selected=(anagrafica.Titolarita=='di proprietà' ? 'selected' : false) ) Di proprietà
+          option(value='In comodato uso' selected=(anagrafica.Titolarita=='In comodato uso' ? 'selected' : false) ) In comodato uso
+          option(value='Altro' selected=(anagrafica.Titolarita=='Altro' ? 'selected' : false) ) Altro
+        else
+          option(value='In locazione' selected=false ) In locazione
+          option(value='Di proprietà' selected=false ) di proprietà
+          option(value='In comodato uso' selected=false ) In comodato uso
+          option(value='Altro' selected=false ) Altro
+    div.form-group
+      label(for='Proprietario') Proprietario:
+      input#Proprietario.form-control(type='text', placeholder='Proprietario' name='Proprietario' required='true' value=(undefined===anagrafica ? '' : anagrafica.Proprietario) )
+    div.form-group
+      label(for='Finanziamenti') Finanziamenti:
+      select#Finanziamenti.form-control(type='select', placeholder='Select Finanziamenti' name='Finanziamenti' required='true' )
+        if anagrafica
+          option(value='SI' selected=(anagrafica.Finanziamenti=='SI' ? 'selected' : false) ) SI
+          option(value='NO' selected=(anagrafica.Finanziamenti=='NO' ? 'selected' : false) ) NO
+        else
+          option(value='SI' selected=false ) SI
+          option(value='NO' selected=false ) NO
+    div.form-group
+      label(for='Concessione_Comune') Concessione_Comune:
+      select#Concessione_Comune.form-control(type='select', placeholder='Select Concessione_Comune' name='Concessione_Comune' required='true' )
+        if anagrafica
+          option(value='SI' selected=(anagrafica.Concessione_Comune=='SI' ? 'selected' : false) ) SI
+          option(value='NO' selected=(anagrafica.Concessione_Comune=='NO' ? 'selected' : false) ) NO
+        else
+          option(value='SI' selected=false ) SI
+          option(value='NO' selected=false ) NO
+    div.form-group
+      label(for='ore_Formazione') Ore_Formazione:
+      input#ore_Formazione.form-control(type='text', placeholder='Ore_Formazione' name='Ore_Formazione' required='true' value=(undefined===anagrafica ? '' : anagrafica.Ore_Formazione) )
+    div.form-group
+      label(for='PL1') PL1:
+      input#PL1.form-control(type='text', placeholder='PL1' name='PL1' required='true' value=(undefined===anagrafica ? '' : anagrafica.PL1) )
+    div.form-group
+      label(for='PL2') PL2:
+      input#PL2.form-control(type='text', placeholder='PL2' name='PL2' required='true' value=(undefined===anagrafica ? '' : anagrafica.PL2) )
+    div.form-group
+      label(for='PL3') PL3:
+      input#PL3.form-control(type='text', placeholder='PL3' name='PL3' required='true' value=(undefined===anagrafica ? '' : anagrafica.PL3) )
+    div.form-group
+      label(for='PL4') PL4:
+      input#PL4.form-control(type='text', placeholder='PL4' name='PL4' required='true' value=(undefined===anagrafica ? '' : anagrafica.PL4) )
+    div.form-group
+      label(for='Oltre4PL') Oltre4PL:
+      input#Oltre4PL.form-control(type='text', placeholder='Oltre4PL' name='Oltre4PL' required='true' value=(undefined===anagrafica ? '' : anagrafica.Oltre4PL) )
+    div.form-group
+      label(for='PLB1') PLB1:
+      input#PLB1.form-control(type='text', placeholder='PLB1' name='PLB1' required='true' value=(undefined===anagrafica ? '' : anagrafica.PLB1) )
+    div.form-group
+      label(for='PLB2') PLB2:
+      input#PLB2.form-control(type='text', placeholder='PLB2' name='PLB2' required='true' value=(undefined===anagrafica ? '' : anagrafica.PLB2) )
+    div.form-group
+      label(for='PLB3') PLB3:
+      input#PLB3.form-control(type='text', placeholder='PLB3' name='PLB3' required='true' value=(undefined===anagrafica ? '' : anagrafica.PLB3) )
+    div.form-group
+      label(for='PLB4') PLB4:
+      input#PLB4.form-control(type='text', placeholder='PLB4' name='PLB4' required='true' value=(undefined===anagrafica ? '' : anagrafica.PLB4) )
+    div.form-group
+      label(for='Oltre4PLB') oltre4PLB:
+      input#Oltre4PLB.form-control(type='text', placeholder='Oltre4PLB' name='Oltre4PLB' required='true' value=(undefined===anagrafica ? '' : anagrafica.Oltre4PLB) )
+    div.form-group
+      label(for='Condizionamento') Condizionamento:
+      select#Condizionamento.form-control(type='select', placeholder='Select Condizionamento' name='Condizionamento' required='true' )
+        if anagrafica
+          option(value='SI' selected=(anagrafica.Condizionamento=='SI' ? 'selected' : false) ) SI
+          option(value='NO' selected=(anagrafica.Condizionamento=='NO' ? 'selected' : false) ) NO
+        else
+          option(value='SI' selected=false ) SI
+          option(value='NO' selected=false ) NO
+    div.form-group
+      label(for='Ossigeno') Ossigeno:
+      select#Ossigeno.form-control(type='select', placeholder='Select Ossigeno' name='Ossigeno' required='true' )
+        if anagrafica
+          option(value='SI' selected=(anagrafica.Ossigeno=='SI' ? 'selected' : false) ) SI
+          option(value='NO' selected=(anagrafica.Ossigeno=='NO' ? 'selected' : false) ) NO
+        else
+          option(value='SI' selected=false ) SI
+          option(value='NO' selected=false ) NO
+    div.form-group
+      label(for='Infermiera_H24') Infermiera_H24:
+      select#Infermiera_H24.form-control(type='select', placeholder='Select Infermiera_H24' name='Infermiera_H24' required='true' )
+        if anagrafica
+          option(value='SI' selected=(anagrafica.Infermiera_H24=='SI' ? 'selected' : false) ) SI
+          option(value='NO' selected=(anagrafica.Infermiera_H24=='NO' ? 'selected' : false) ) NO
+        else
+          option(value='SI' selected=false ) SI
+          option(value='NO' selected=false ) NO
+    div.form-group
+      label(for='Medico_H24') Medico_H24:
+      select#Medico_H24.form-control(type='select', placeholder='Select Medico_H24' name='Medico_H24' required='true' )
+        if anagrafica
+          option(value='SI' selected=(anagrafica.Medico_H24=='SI' ? 'selected' : false) ) SI
+          option(value='NO' selected=(anagrafica.Medico_H24=='NO' ? 'selected' : false) ) NO
+        else
+          option(value='SI' selected=false ) SI
+          option(value='NO' selected=false ) NO
+    div.form-group
+      label(for='Infermieri_notte') Infermieri_notte:
+      input#Infermieri_notte.form-control(type='text', placeholder='Infermieri_notte' name='Infermieri_notte' required='true' value=(undefined===anagrafica ? '' : anagrafica.Infermieri_notte) )
+    div.form-group
+      label(for='Medici_Notte') Medici_Notte:
+      input#Medici_Notte.form-control(type='text', placeholder='Medici_Notte' name='Medici_Notte' required='true' value=(undefined===anagrafica ? '' : anagrafica.Medici_Notte) )
+    div.form-group
+      label(for='Data_compilazione') Data_compilazione:
+      input#Data_compilazione.form-control(type='date', placeholder='Data_compilazione' name='Data_compilazione' required='true' value=(undefined===anagrafica ? '' : anagrafica.Data_compilazione) )
+      br
+      button.btn.btn-primary(type='submit') Submit
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

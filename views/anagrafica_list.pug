@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+  each anagrafica in anagrafica_list
+    li 
+      a(href=anagrafica.url) #{anagrafica.Udo} 
+      | (#{anagrafica.Denominazione})
+      | (#{anagrafica.Cudes}) 
+      | (#{anagrafica.Ats}) 
+  else
+    li Non ci sono Anagrafiche nel Database.

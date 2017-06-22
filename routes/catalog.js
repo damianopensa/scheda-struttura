@@ -3,6 +3,8 @@ var router = express.Router();
 
 
 // Require our controllers
+var anagrafica_controller = require('../controllers/anagraficaController'); 
+
 var book_controller = require('../controllers/bookController'); 
 var author_controller = require('../controllers/authorController');
 var genre_controller = require('../controllers/genreController');

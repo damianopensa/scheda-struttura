@@ -5,14 +5,16 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('express-locallibrary-tutorial:server');
+var debug = require('debug')('scheda-struttura:server'); // La variabile 'debug' viene usata per fare LOG/tracking, 
+														 // ma deve essere presente (e "matchare") con la variabile
+														 // di ambiente (SET DEBUG=scheda-struttura:*)
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '3000');    // Se il processo ha già allocato una porta prendi quella altrimenti 3000
 app.set('port', port);
 
 /**

@@ -1,0 +1,2 @@
+C:\Users\damiano\Documents\Visual Studio 2015\Projects\scheda-struttura\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\damiano\Documents\Visual Studio 2015\Projects\scheda-struttura\obj\Debug\scheda struttura.njsprojResolveAssemblyReference.cache

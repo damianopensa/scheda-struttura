@@ -8,7 +8,7 @@ var expressValidator = require('express-validator');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var schedastruttura = require('./routes/schedastruttura'); //Import routes for "schedastruttura" area of site
+var catalog = require('./routes/catalog'); //Import routes for "catalog" area of site
 var compression = require('compression');
 var helmet = require('helmet');
 
@@ -22,7 +22,7 @@ app.use(helmet());
 var mongoose = require('mongoose');
 
 // var mongoDB = process.env.MONGODB_URI || 'mongodb://damiano:nettuno64@ds133251.mlab.com:33251/local_library_64';
-var mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/Scheda-Struttura';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/catalog';
 mongoose.connect(mongoDB);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);              // redirect to ./calalog path
 app.use('/users', users);
-app.use('/schedastruttura', schedastruttura);     // Add schedastruttura routes to middleware chain. (under ./schedastruttura path)
+app.use('/catalog', catalog);     // Add catalog routes to middleware chain. (under ./catalog path)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

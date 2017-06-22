@@ -97,10 +97,12 @@ exports.book_create_post = function(req, res, next) {
     req.sanitize('author').escape();
     req.sanitize('summary').escape();
     req.sanitize('isbn').escape();
+
     req.sanitize('title').trim();
     req.sanitize('author').trim();
     req.sanitize('summary').trim();
     req.sanitize('isbn').trim();
+
     req.sanitize('genre').escape();
 
     var book = new Book(
@@ -269,7 +271,7 @@ exports.book_update_post = function(req, res, next) {
         summary: req.body.summary,
         isbn: req.body.isbn,
         genre: (typeof req.body.genre==='undefined') ? [] : req.body.genre.split(","),
-        _id:req.params.id //This is required, or a new ID will be assigned!
+        _id:req.params.id            //This is required, or a new ID will be assigned!
        });
 
     var errors = req.validationErrors();

@@ -6,20 +6,32 @@
     <ProjectGuid>{bbde1020-f3dc-4f7c-9eba-50b80cdb1d4b}</ProjectGuid>
     <ProjectHome />
     <ProjectView>ShowAllFiles</ProjectView>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>bin\www</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <StartWebBrowser>True</StartWebBrowser>
+    <ScriptArguments>
+    </ScriptArguments>
+    <Environment>DEBUG=scheda-struttura:*</Environment>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Compile Include="app.js.old" />
+    <Compile Include="controllers\anagraficaController.js" />
+    <Compile Include="routes\schedastruttura.js" />
+    <Compile Include="Test_debug.js" />
+    <Content Include="formatta_html.html" />
     <Content Include="package.json" />
+    <Content Include="populatedb_scheda_struttura.bat" />
     <Content Include="README.md" />
     <Compile Include="app.js" />
-    <Compile Include="populatedb.js" />
+    <Compile Include="models\anagrafica.js" />
+    <Compile Include="populatedb_scheda_struttura.js" />
+    <Compile Include="populatedb library.js" />
     <Compile Include="controllers\authorController.js" />
     <Compile Include="controllers\bookController.js" />
     <Compile Include="controllers\bookinstanceController.js" />
@@ -33,6 +45,8 @@
     <Compile Include="routes\users.js" />
     <Content Include="public\images\Library Website - Mongoose_Express.png" />
     <Content Include="public\stylesheets\style.css" />
+    <Content Include="Test_debug.html" />
+    <Content Include="views\index.pug.original" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin" />
